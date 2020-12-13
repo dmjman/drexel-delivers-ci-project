@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drexel Delivers</title>
+
+    <!--Load Bootstrap--> <!-- You must include this in EVERY page of the site -->
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./">DREXEL DELIVERS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="order">Place an Order<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login">Log In / Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <h1>Place an Order</h1>
+        <div class = "container-fluid">
+            <div class = "row">
+                <div class = "col-lg-9">
+                    <h2>Select Choices</h2>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th style="width: 30%">Venue</th>
+                            <th style="width: 55%">Item</th>
+                            <th style="width: 10%">Price</th>
+                            <th style="width: 5%">Order</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {{#each venues}}
+                        {{#each this}}
+                        <tr>
+                            <td>
+                                <p>Pete's Lunch Truck</p>
+                            </td>
+                            <td>
+                                <p class="itemName" data-itemid="{{this.itemid}}">{{this.item}}</p>
+                            </td>
+                            <td>
+                                <p class="itemPrice" data-itemid="{{this.itemid}}">${{this.price}}</p>
+                            </td>
+                            <td>
+                                <button type="button" data-itemid="{{this.itemid}}" class="atc btn btn-light">+</button><br>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    {{/each}}
+                    </tbody>
+                </table>
+                </div>
+                <div class = "col-lg-3">
+                    <h2 class="table cart-table invisible">Cart</h2>
+                    <!-- Subtotal and Total Table -->
+                    <table class = "table cart-table invisible">
+                        <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Remove</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!-- Populated from cart-interactive.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    <form method="post" action="checkout">
+        <input name = "cart" value = "" hidden = "true">
+        <button type="submit" class="btn btn-primary btn-lg btn-block" name="toCheckout">Checkout</button>
+    </form>
+
+    <script src="javascripts/cart-interactive.js"></script> <!-- DO NOT CHANGE THIS DIRECTORY -->
+
+</body>

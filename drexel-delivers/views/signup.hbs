@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Drexel Delivers</title>
+
+    <!--Load Bootstrap-->
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./">DREXEL DELIVERS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="order">Place an Order<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login">Log In / Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <h1>Sign Up</h1>
+    <br>
+    <form action="/signup/create_account" method="post">
+
+        <h2>Log-In Information</h2>
+        <div class="form-group">
+
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" placeholder="Name">
+            <small id="nameHelp" class="form-text text-muted">Enter in the name by which you would like to be referred</small>
+
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Password">
+
+        </div>
+        <br>
+
+        <h2>Address</h2>
+
+        <div class="form-group">
+
+            <label for="address_street">Street</label>
+            <input type="text" class="form-control" name="address_street" placeholder="Street">
+
+            <label for="address_city">City</label>
+            <input type="text" class="form-control" name="address_city" placeholder="City">
+
+            <label for="address_state">State</label>
+            <input type="text" class="form-control" size="2" name="address_state" placeholder="State">
+
+            <label for="address_zip">Zip Code</label>
+            <input type="text" class="form-control" size="5" name="address_zip" placeholder="Zip">
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="form-control" name="phone" placeholder="Phone">
+            <small id="phoneHelp" class="form-text text-muted">We will only use this number for contacting you about your order.
+                                                           <br>You will never receive unsolicited calls from Drexel Delivers.</small>
+        </div>
+
+        <div class="form-group">
+
+            <label for="exampleInputPassword1">Birthday</label>
+            <input type="date" class="form-control" name="birthday" placeholder="Birthday">
+            <small id="birthdayHelp" class="form-text text-muted">You must be 18 years or older to use Drexel Delivers.</small>
+
+        </div>
+
+        <div class="form-check">
+
+            <input type="checkbox" class="form-check-input" id="termsandconditions">
+            <label class="form-check-label" for="exampleCheck1">I Agree to the Terms and Conditions</label>
+
+        </div>
+
+        <br>
+
+        <input type="submit" name="acct" value="Sign Up">
+
+    </form>
+
+    <script src="javascripts/submit-signup.js"></script>
+</body>

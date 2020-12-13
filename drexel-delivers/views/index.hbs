@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drexel Delivers</title>
+    <!--Load Bootstrap--> <!-- You must include this in EVERY page of the site -->
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./">DREXEL DELIVERS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="order">Place an Order<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login">Log In / Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <div class = "container-fluid">
+        <h1>Welcome to {{title}}</h1>
+        <p class = "text-info">Drexel Delivers is the cheapest, quickest, and easiest way to order food on the Drexel University Campus.</p>
+        <form action="order"><button class="btn btn-outline-success" type="submit">Place an Order</button></form>
+        <br>
+        <!-- To be used for our pictures -->
+        <div class = "row">
+            <div class = "col-lg-3">
+                <img src="images/homepage_1.jpg" alt="homepage1" class="img-thumbnail">
+            </div>
+            <div class = "col-lg-3">
+                <img src="images/homepage_2.jpg" alt="homepage2" class="img-thumbnail">
+            </div>
+            <div class = "col-lg-3">
+                <img src="images/homepage_3.jpg" alt="homepage3" class="img-thumbnail">
+            </div>
+            <div class = "col-lg-3">
+                <img src="images/homepage_4.jpg" alt="homepage4" class="img-thumbnail">
+            </div>
+        </div>
+        <br>
+
+        <h2>What people have to say about Drexel Delivers</h2>
+        <!-- For quotations -->
+        <blockquote>
+            <p>I f''' with it - Dylan Paikin</p>
+        </blockquote>
+
+        <h3>Reasons to Choose Drexel Delivers</h3>
+        <!-- Creating Lists -->
+        <dl>
+            <dt>It's Fast.</dt>
+                <dd>A team of dedicated couriers is always ready to serve you.</dd>
+                <dd>Your food will be delivered in 45 minutes or less. Or your money back, with your food.</dd>
+            <dt>It's Easy to Use.</dt>
+                <dd>One Website. One process. Simple.</dd>
+                <dd>Use on your phone, tablet, or anything that can access the internet.</dd>
+            <dt>It's Cheap.</dt>
+                <dd>It is cheaper than any other food service.</dd>
+                <dd>Find a cheaper service, and we will pricematch it.</dd>
+        </dl>
+    </div>
+
+</body>
+</html>

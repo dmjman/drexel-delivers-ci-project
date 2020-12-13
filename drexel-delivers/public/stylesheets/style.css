@@ -1,0 +1,28 @@
+body {
+  padding: 30px;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: grey;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1 {
+  font-style: italic;
+  color: white;
+}
+
+dt {
+  font: 20px "Lucida Grande", Helvetica, sans-serif;
+  line-height: 2.0em; /* For your reference, 1 em = 12 px */
+}
+
+dl{
+  color: #0A0A0A;
+  line-height: 0.7em;
+}
+
+.nav-item{
+  float: right;
+}
